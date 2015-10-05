@@ -1,0 +1,108 @@
+[user]
+	name = jz
+	email = macgyver@users.noreply.github.com
+
+[color]
+	ui = true
+
+[credential]
+	helper = osxkeychain
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+[log]
+	abbrevCommit = true
+
+[alias]
+	la = "!git config -l | grep alias | cut -c 7-"
+
+# Shortcuts
+	a = add
+	br = branch
+	ci = commit
+	cl = clone
+	co = checkout
+	cp = cherry-pick
+	s = status
+
+# Checkout
+	cog = "!f() { git branch | grep \"$1\" | xargs git checkout; }; f"
+
+# Add
+	ai = add -i
+	ap = add -p
+	au = add -u
+
+# Commit
+	cm = commit -m
+	cma = commit -a -m
+	cam = commit -a -m
+	ca = commit --amend
+	amend = commit --amend
+	caa = commit -a --amend -C HEAD
+
+# Log
+	filelog = log -u
+	lc = "!f() { git ll "$1"^.."$1"; }; f"
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	le = log --oneline --decorate
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	lol = log --graph --all --decorate --oneline
+
+# Branch
+	bra = branch -ra
+
+# Diff
+	d = diff -U7
+	dif = diff -U24
+	ds = diff --staged
+	dt = diff --stat
+	dts = diff --staged --stat
+	dl = "!git ll -1"
+	# Diff last commit
+	dlc = diff --cached HEAD^
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+# Status
+	st = status -s -b
+
+# Stash
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	sp = stash pop
+
+# Grep
+	grep = grep -Ii
+	gr = grep -Ii
+	# Grep root directory
+	gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+	# Grep on filename
+	f = "!git ls-files | grep -i"
+
+# Tags
+	lasttag = describe --tags --abbrev=0
+	lt = describe --tags --abbrev=0
+
+[push]
+	default = current
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+[tag]
+	sort = version:refname
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+
+# Push/Pull
+	pulp = git pull --prune
+	pusu = git push -u
