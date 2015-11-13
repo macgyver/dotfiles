@@ -106,3 +106,9 @@
 # Push/Pull
 	pulp = git pull --prune
 	pusu = git push -u
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[rerere]
+	enabled = true
