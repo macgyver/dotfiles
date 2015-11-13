@@ -53,8 +53,7 @@ plugins=(brew git gitignore gulp grunt npm osx python rand-quote web-search)
 
 # User configuration
 
-export PATH="/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
 
