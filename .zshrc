@@ -85,7 +85,7 @@ bindkey "^[^[[C" forward-word
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
+alias gpp="git pull --prune; git branch --merged develop | grep -v master | xargs git branch -d"
 alias grp="git reset --hard @{u}; git pull"
 # trove stuff
 alias o=orthrus

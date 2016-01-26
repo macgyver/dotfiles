@@ -142,15 +142,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 "Bundle "Lokaltog/vim-powerline"
 
-" CoffeeScript syntax highlighting and stuff
-Bundle "kchmck/vim-coffee-script"
-
-" Less syntax highlighting
-Bundle 'lunaru/vim-less'
-
-" Handlebars syntax highlighting
-Bundle "nono/vim-handlebars"
-
 " for ternjs.. need a newer vim first
 "let g:ycm_path_to_python_interpreter = "/Users/jz/.pyenv/shims/python"
 "Bundle "Valloric/YouCompleteMe"

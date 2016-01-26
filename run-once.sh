@@ -5,3 +5,5 @@ sudo dseditgroup -o edit -a jz -t user wheel
 sudo dseditgroup -o edit -a jz -t user _www
 # http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
 # https://github.com/OpenEmu/OpenEmu/wiki/Compiling-From-Source-Guide
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
