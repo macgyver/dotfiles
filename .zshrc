@@ -5,7 +5,7 @@ export ZSH=/Users/jz/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,6 +52,7 @@ ZSH_THEME="robbyrussell"
 plugins=(brew git gitignore gulp grunt npm osx python rand-quote web-search)
 
 # User configuration
+DEFAULT_USER=jz
 
 export PATH="/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
