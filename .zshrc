@@ -56,6 +56,9 @@ DEFAULT_USER=jz
 
 export PATH="/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
+# soco shit
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -86,7 +89,7 @@ bindkey "^[^[[C" forward-word
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gpp="git pull --prune; git branch --merged develop | grep -v master | xargs git branch -d"
+alias gpp="git pull --prune; git branch --merged develop | grep -v master | grep -v develop | xargs git branch -d"
 alias grp="git reset --hard @{u}; git pull"
 # trove stuff
 alias o=orthrus
