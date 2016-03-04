@@ -15,6 +15,7 @@ set ruler
 "set nu " show line numbers - don't care for this by default, generally
 set showcmd
 
+set t_Co=512   " 256 color mode fcks up my yellows, but somehow this works..
 "hi Comment ctermfg=White ctermbg=Blue guifg=#80a0ff
 set cursorline " highlighted line for current cursor
 "hi CursorLine cterm=NONE ctermbg=Black guibg=Black
