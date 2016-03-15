@@ -10,9 +10,23 @@
 .vim/bundle
 .npm
 .nvm
+.node-gyp/
+.node_repl_history
 .ssh
 .bash_history
 .oh-my-zsh
+.lesshst
+.pyenv/
+# something used by powerline, evidently
+.local/
+# file used by VLC
+.dvdcss/
+.subversion/
+.cups/
+.dropbox/
+.electron/
+.atom/
+.bash_sessions/
 Applications/
 Desktop/
 Documents/
@@ -24,4 +38,6 @@ Music/
 OpenEmu/
 Pictures/
 Public/
-
+brokendisk/
+trove/
+code/
