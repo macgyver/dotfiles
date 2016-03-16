@@ -16,6 +16,7 @@
 .bash_history
 .oh-my-zsh
 .lesshst
+.php_history
 .pyenv/
 # something used by powerline, evidently
 .local/
