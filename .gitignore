@@ -12,6 +12,8 @@
 .nvm
 .node-gyp/
 .node_repl_history
+# nodemon at least uses this..
+.config
 .ssh
 .bash_history
 .oh-my-zsh
