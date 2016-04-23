@@ -8,6 +8,7 @@
 .viminfo
 .vim/.netrwhist
 .vim/bundle
+.homebrew_analytics_user_uuid
 .npm
 .nvm
 .node-gyp/
