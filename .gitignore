@@ -9,6 +9,7 @@
 .vim/.netrwhist
 .vim/bundle
 .homebrew_analytics_user_uuid
+.mysql_history
 .npm
 .nvm
 .node-gyp/
