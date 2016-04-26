@@ -140,10 +140,11 @@ autocmd vimenter * if !argc() | NERDTree | endif
 " close vim if nerdtree is the only buffer left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" for ternjs.. need a newer vim first
+" for YouCompleteMe. need a newer vim first
 "let g:ycm_path_to_python_interpreter = "/Users/jz/.pyenv/shims/python"
 "Bundle "Valloric/YouCompleteMe"
-"Bundle "marijnh/tern_for_vim"
+Bundle "marijnh/tern_for_vim"
+Plugin 'pangloss/vim-javascript'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
