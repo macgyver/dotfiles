@@ -12,6 +12,9 @@
 .mysql_history
 .npm
 .nvm
+.docker/
+.npmrc
+.openvpn-connect.json
 .node-gyp/
 .node_repl_history
 # nodemon at least uses this..
