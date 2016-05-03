@@ -9,6 +9,9 @@
 .vim/.netrwhist
 .vim/bundle
 .homebrew_analytics_user_uuid
+.aws/
+.oracle_jre_usage/
+.secrets/
 .mysql_history
 .npm
 .nvm
