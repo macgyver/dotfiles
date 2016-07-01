@@ -74,7 +74,7 @@ keys.push(Phoenix.bind('m', ['ctrl', 'cmd'], function(){
 	var window = Window.focusedWindow();
 	if (!window) return;
 	window.maximize();
-	setWindowCentral(window);
+	//setWindowCentral(window); << not sure exactly but this api is busted
 }));
 
 // center window
