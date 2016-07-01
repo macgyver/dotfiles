@@ -1,6 +1,6 @@
 # disable two-finger swipe navigation in Chrome http://apple.stackexchange.com/a/80163/62458
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
-# add me to wheel and _www
+# add me to wheel and _www for apache
 sudo dseditgroup -o edit -a jz -t user wheel
 sudo dseditgroup -o edit -a jz -t user _www
 # add _www to _www - wtf is this not already the case?
@@ -12,3 +12,7 @@ vim +PluginInstall +qall
 brew install git
 brew install zsh
 brew cask install phoenix
+
+git clone https://github.com/powerline/fonts.git powerline-fonts
+./powerline-fonts/install.sh
+rm -rf powerline-fonts
