@@ -5,8 +5,8 @@ sudo dseditgroup -o edit -a jz -t user wheel
 sudo dseditgroup -o edit -a jz -t user _www
 # add _www to _www - wtf is this not already the case?
 sudo dseditgroup -o edit -a _www -t user _www
-# http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
-# https://github.com/OpenEmu/OpenEmu/wiki/Compiling-From-Source-Guide
+
+echo "Install driver for xbox 360 controllers https://github.com/360Controller/360Controller/releases"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 brew install git zsh
