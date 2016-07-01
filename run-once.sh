@@ -9,3 +9,6 @@ sudo dseditgroup -o edit -a _www -t user _www
 # https://github.com/OpenEmu/OpenEmu/wiki/Compiling-From-Source-Guide
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+brew install git
+brew install zsh
+brew cask install phoenix
