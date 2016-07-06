@@ -57,3 +57,8 @@ brokendisk/
 trove/
 code/
 .secrets
+.wget-hsts
+# ruby shit
+.gem
+.cache
+
