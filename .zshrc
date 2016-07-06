@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git gitignore gulp grunt npm osx python rand-quote web-search)
+plugins=(brew git gitfast gitignore gulp grunt npm python rand-quote)
 
 # User configuration
 DEFAULT_USER=jz
