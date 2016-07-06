@@ -24,17 +24,15 @@ set cursorline " highlighted line for current cursor
 " incremental, case-insentive search
 set ignorecase
 set incsearch
-filetype indent on
 
-
-" default to using tabs, which span 4 columns
-set tabstop=4 shiftwidth=4
-
+" default to using tabs, which span 8 columns
+set autoindent smarttab noexpandtab copyindent preserveindent softtabstop=0 shiftwidth=8 tabstop=8
 " 4 spaces for Social Reader
-autocmd BufNewFile,BufRead ~/labs/facebook-trove/* set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+"autocmd BufNewFile,BufRead ~/labs/facebook-trove/* set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 " 2 spaces for MonetaJS
-autocmd BufNewFile,BufRead ~/labs/monetajs/* set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+"autocmd BufNewFile,BufRead ~/labs/monetajs/* set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
+filetype indent on
 
 if has('autocmd')
 	filetype plugin indent on
@@ -63,11 +61,9 @@ if has('autocmd')
 endif
 
 
-set autoindent
 set backspace=indent,eol,start
 "set complete-=i
 set showmatch
-set smarttab
 
 "set nrformats-=octal
 set shiftround
