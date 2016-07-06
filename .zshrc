@@ -54,7 +54,7 @@ plugins=(brew git gitfast gitignore gulp grunt npm python rand-quote)
 # User configuration
 DEFAULT_USER=jz
 
-export PATH="/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="$PATH:/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 # soco shit
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
@@ -100,4 +100,3 @@ function lsa {
 
 export NVM_DIR="/Users/jz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
