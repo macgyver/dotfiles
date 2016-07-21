@@ -11,12 +11,12 @@ var moveKey = 'ctrl',
 
 
 function getPixelsByPercent(percent, screenFrame) {
-	screenFrame = screenFrame || Window.focusedWindow().screen().frameWithoutDockOrMenu();
+	screenFrame = screenFrame || Window.focused().screen().frameWithoutDockOrMenu();
 	screenFrame;
 }
 
 function nudgeFocusedWindow(prop, val) {
-	var win = Window.focusedWindow(),
+	var win = Window.focused(),
 		frame = win.frame();
 
 	frame[prop] = frame[prop] + val;
@@ -25,44 +25,45 @@ function nudgeFocusedWindow(prop, val) {
 }
 
 // move screen
-keys.push(Phoenix.bind('left', ['ctrl', 'cmd'], function(){
+
+Key.on('left', ['ctrl', 'cmd'], function(){
 	nudgeFocusedWindow('x', -lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('right', ['ctrl', 'cmd'], function(){
+Key.on('right', ['ctrl', 'cmd'], function(){
 	nudgeFocusedWindow('x', lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('up', ['ctrl', 'cmd'], function(){
+Key.on('up', ['ctrl', 'cmd'], function(){
 	nudgeFocusedWindow('y', -lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('down', ['ctrl', 'cmd'], function(){
+Key.on('down', ['ctrl', 'cmd'], function(){
 	nudgeFocusedWindow('y', lotAmount)
-}));
+});
 
 // resize screen
-keys.push(Phoenix.bind('left', ['ctrl', 'alt'], function(){
+Key.on('left', ['ctrl', 'alt'], function(){
 	nudgeFocusedWindow('width', -lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('right', ['ctrl', 'alt'], function(){
+Key.on('right', ['ctrl', 'alt'], function(){
 	nudgeFocusedWindow('width', lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('up', ['ctrl', 'alt'], function(){
+Key.on('up', ['ctrl', 'alt'], function(){
 	nudgeFocusedWindow('height', -lotAmount);
-}));
+});
 
-keys.push(Phoenix.bind('down', ['ctrl', 'alt'], function(){
+Key.on('down', ['ctrl', 'alt'], function(){
 	nudgeFocusedWindow('height', lotAmount);
-}));
+});
 
 // todo: these next two only work properly on a single monitor
 //
 // maximize window
-keys.push(Phoenix.bind('m', ['ctrl', 'cmd'], function(){
-	/*var focusedWindow = Window.focusedWindow(),
+Key.on('m', ['ctrl', 'cmd'], function(){
+	/*var focusedWindow = Window.focused(),
 		screenFrame = focusedWindow.screen().frameIncludingDockAndMenu();
 
 	focusedWindow.setFrame({
@@ -71,15 +72,15 @@ keys.push(Phoenix.bind('m', ['ctrl', 'cmd'], function(){
 		width: screenFrame.width,
 		height: screenFrame.height
 	});*/
-	var window = Window.focusedWindow();
+	var window = Window.focused();
 	if (!window) return;
 	window.maximize();
 	//setWindowCentral(window); << not sure exactly but this api is busted
-}));
+});
 
 // center window
-keys.push(Phoenix.bind('c', ['ctrl', 'cmd'], function(){
-	var window = Window.focusedWindow();
+Key.on('c', ['ctrl', 'cmd'], function(){
+	var window = Window.focused();
 	var windowFrame = window.frame();
 	var screenFrame = window.screen().visibleFrameInRectangle();
 
@@ -87,4 +88,4 @@ keys.push(Phoenix.bind('c', ['ctrl', 'cmd'], function(){
 		x: (screenFrame.width - windowFrame.width) / 2,
 		y: (screenFrame.height - windowFrame.height) / 2
 	}));
-}));
+});
