@@ -10,6 +10,7 @@
 
 [core]
 	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [log]
 	abbrevCommit = true
@@ -87,6 +88,7 @@
 # Tags
 	lasttag = describe --tags --abbrev=0
 	lt = describe --tags --abbrev=0
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 
 [push]
 	default = current
