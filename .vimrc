@@ -130,12 +130,6 @@ Plugin 'gmarik/Vundle.vim'
 "
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-Bundle "scrooloose/nerdtree"
-" start nerdtree when opening vim w/o a file
-autocmd vimenter * if !argc() | NERDTree | endif
-" close vim if nerdtree is the only buffer left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " for YouCompleteMe. need a newer vim first
 "let g:ycm_path_to_python_interpreter = "/Users/jz/.pyenv/shims/python"
 "Bundle "Valloric/YouCompleteMe"
