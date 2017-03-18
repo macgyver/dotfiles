@@ -4,7 +4,8 @@ set autoread
 set fileformat=unix
 set fileformats+=mac
 " scrolling
-set mouse=a
+"set mouse=a
+set number
 
 "set nowrap " still not sure how i feel about linewrapping in vi!
 "set showbreak=↪  " not sure how I feel about this - I don't even wrap lines anyway

@@ -57,6 +57,7 @@ DEFAULT_USER=jz
 export PATH="$PATH:/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 
 # soco shit
+source /usr/local/bin/virtualenvwrapper.sh
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 source $ZSH/oh-my-zsh.sh
