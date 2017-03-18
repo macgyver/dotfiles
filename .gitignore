@@ -29,6 +29,7 @@
 .lesshst
 .php_history
 .pyenv/
+.virtualenvs/
 # something used by powerline, evidently
 .local/
 # file used by VLC
@@ -41,7 +42,6 @@
 .bash_sessions/
 .aws/
 .docker/
-.openvpn-connect.json
 Applications/
 Desktop/
 Documents/
@@ -61,4 +61,5 @@ code/
 # ruby shit
 .gem
 .cache
+.bundler
 
