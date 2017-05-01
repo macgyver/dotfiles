@@ -10,7 +10,7 @@ defaults write com.google.Chrome.canary.plist AppleEnableSwipeNavigateWithScroll
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 brew install zsh git diff-so-fancy watchman
-brew cask install phoenix qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install flux phoenix qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 # powerline fonts for agnoster theme
 git clone https://github.com/powerline/fonts.git powerline-fonts
 ./powerline-fonts/install.sh
