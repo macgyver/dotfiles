@@ -2,10 +2,10 @@
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write com.google.Chrome.canary.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
 # add me to wheel and _www for apache
-sudo dseditgroup -o edit -a jz -t user wheel
-sudo dseditgroup -o edit -a jz -t user _www
+#sudo dseditgroup -o edit -a jz -t user wheel
+#sudo dseditgroup -o edit -a jz -t user _www
 # add _www to _www - wtf is this not already the case?
-sudo dseditgroup -o edit -a _www -t user _www
+#sudo dseditgroup -o edit -a _www -t user _www
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
