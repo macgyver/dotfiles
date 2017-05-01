@@ -1,10 +1,12 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jz/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -49,16 +51,12 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git gitfast gitignore gulp grunt npm python rand-quote)
+plugins=(brew git gitfast gitignore npm python rand-quote)
 
 # User configuration
 DEFAULT_USER=jz
 
-export PATH="$PATH:/Users/jz/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-
-# soco shit
-source /usr/local/bin/virtualenvwrapper.sh
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,11 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-export EDITOR="vi"
-bindkey "^[^[[D" backward-word
-bindkey "^[^[[C" forward-word
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -92,9 +86,7 @@ bindkey "^[^[[C" forward-word
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gpp="git pull --prune; git branch --merged develop | grep -v master | grep -v develop | xargs git branch -d"
 alias grp="git reset --hard @{u}; git pull"
-# trove stuff
-alias o=orthrus
 
-function lsa {
-	ls -larth $1
-}
+export EDITOR="vi"
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
