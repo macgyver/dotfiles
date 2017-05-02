@@ -55,8 +55,7 @@ OpenEmu/
 Pictures/
 Public/
 brokendisk/
-trove/
-code/
+ll/
 .secrets
 .wget-hsts
 # ruby shit
