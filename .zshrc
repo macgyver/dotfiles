@@ -90,3 +90,6 @@ alias grp="git reset --hard @{u}; git pull"
 export EDITOR="vi"
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"

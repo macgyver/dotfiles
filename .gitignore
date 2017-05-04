@@ -55,7 +55,7 @@ OpenEmu/
 Pictures/
 Public/
 brokendisk/
-ll/
+trove/
 .secrets
 .wget-hsts
 # ruby shit
@@ -63,3 +63,7 @@ ll/
 .cache
 .bundler
 
+# legends of learning
+learning-machine/
+.babel.json
+.jspm/
