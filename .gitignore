@@ -62,6 +62,7 @@ trove/
 .gem
 .cache
 .bundler
+.v8flags*
 
 # legends of learning
 learning-machine/

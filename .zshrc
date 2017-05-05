@@ -7,7 +7,7 @@ export ZSH=/Users/jz/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 alias gpp="git pull --prune; git branch --merged develop | grep -v master | grep -v develop | xargs git branch -d"
 alias grp="git reset --hard @{u}; git pull"
 
-export EDITOR="vi"
+export EDITOR="vim"
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 
