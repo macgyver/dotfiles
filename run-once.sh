@@ -18,3 +18,4 @@ rm -rf powerline-fonts
 
 echo "Install driver for xbox 360 controllers https://github.com/360Controller/360Controller/releases"
 echo "Install git diff enhancement https://github.com/so-fancy/diff-so-fancy"
+echo "Install SF Mono font system-wide https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d"
