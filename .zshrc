@@ -92,4 +92,5 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
+[[ -f "$NVM_START_SCRIPT" ]] && . "$NVM_START_SCRIPT"
