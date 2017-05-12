@@ -246,5 +246,6 @@ tmux_conf_theme_clock_style='24'
 # re-bind n/p for next/previous window from whatever oh-my-tmux does
 unbind p
 unbind n
-bind -r p previous-window # select previous window
-bind -r n next-window     # select next window
+bind p previous-window # select previous window
+bind n next-window     # select next window
+bind S-Tab previous-window # not working yet.. unsure why
