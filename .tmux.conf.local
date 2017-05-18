@@ -249,3 +249,6 @@ unbind n
 bind p previous-window # select previous window
 bind n next-window     # select next window
 bind S-Tab previous-window # not working yet.. unsure why
+# i use C-a for "go to start of line"
+set -ug prefix2
+unbind C-a
