@@ -3,7 +3,7 @@
 LOL_DIR="/Users/jz/learning-machine"
 
 tmux new-session -d -s lol -c "$LOL_DIR/api"
-tmux rename-window -t lol 'lol-app'
+tmux rename-window lol-app
 
 tmux split-window -v -c "$LOL_DIR/ui"
 tmux split-window -h -t lol:lol-app.1 -c "$LOL_DIR/server"

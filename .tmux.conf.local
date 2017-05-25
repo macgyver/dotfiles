@@ -252,3 +252,4 @@ bind S-Tab previous-window # not working yet.. unsure why
 # i use C-a for "go to start of line"
 set -ug prefix2
 unbind C-a
+set-option -g allow-rename off
