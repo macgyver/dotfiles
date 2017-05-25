@@ -1,7 +1,6 @@
 # disable two-finger swipe navigation in Chrome http://apple.stackexchange.com/a/80163/62458
 defaults write com.google.Chrome        AppleEnableSwipeNavigateWithScrolls      -bool FALSE
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls      -bool FALSE
-# todo: these mouse swipe ones don't seem to work
 defaults write com.google.Chrome        AppleEnableMouseSwipeNavigateWithScrolls -bool FALSE
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool FALSE
 # add me to wheel and _www for apache
