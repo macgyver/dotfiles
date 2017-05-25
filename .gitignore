@@ -63,6 +63,7 @@ trove/
 .cache
 .bundler
 .v8flags*
+.psql_history
 
 # legends of learning
 learning-machine/
