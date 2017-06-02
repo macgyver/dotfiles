@@ -88,8 +88,13 @@ alias gpp="git pull --prune; git branch --merged develop | grep -v master | grep
 alias grp="git reset --hard @{u}; git pull"
 
 export EDITOR="vim"
+# alt-left/right to move forwards/backwards one word
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+	bindkey "\e[1;3C" forward-word
+	bindkey "\e[1;3D" backward-word
+fi
 
 export NVM_DIR="$HOME/.nvm"
 NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
