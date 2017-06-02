@@ -13,16 +13,18 @@ tmux split-window -h -t lol:lol-app.1 -c "$LOL_DIR/server"
 
 tmux select-pane -t lol:lol-app.2
 # server relies on api
-# todo: stop using unreliable sleep when you figure out how to use the wait-for signals
+# todo: stop using unreliable sleep when you figure out how to use the wait-for signals for persistent processes
 #tmux send-keys "yarn; tmux wait-for api-started; yarn start" Enter
-tmux send-keys "yarn; sleep 5; yarn start" Enter
+tmux send-keys "yarn; sleep 5" Enter
+tmux send-keys "yarn start" Enter
 
 tmux select-pane -t lol:lol-app.1
 # todo: this wait-for signal never gets sent because the `start` job never ends
 tmux send-keys "yarn; yarn start; tmux wait-for -S api-started" Enter
 
 tmux select-pane -t lol:lol-app.3
-tmux send-keys "yarn; yarn start" Enter
+tmux send-keys "yarn" Enter
+tmux send-keys "yarn start" Enter
 
 
 # update and run api
