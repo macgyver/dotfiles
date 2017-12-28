@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jz/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git gitfast gitignore npm python rand-quote)
+plugins=(brew git gitfast gitignore npm gulp python rand-quote dune-quotes)
 
 # User configuration
 DEFAULT_USER=jz
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gpp="git pull --prune; git branch --merged develop | grep -v master | grep -v develop | xargs git branch -d"
+alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
 alias grp="git reset --hard @{u}; git pull"
 
 export EDITOR="vim"
@@ -96,6 +96,15 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	bindkey "\e[1;3D" backward-word
 fi
 
-export NVM_DIR="$HOME/.nvm"
 NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
-[[ -f "$NVM_START_SCRIPT" ]] && . "$NVM_START_SCRIPT"
+if [[ -f "$NVM_START_SCRIPT" ]]; then
+	export NVM_DIR="$HOME/.nvm"
+	. "$NVM_START_SCRIPT"
+fi
+
+# www.slate.com
+export CLAY_ACCESS_KEY=MadeUpAccessKey
+export CLAY_DEFAULT_KEY=local
+export CLAY_DEFAULT_SITE=local-slate
+# node ./bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ ../slate-redux/first-run/slate-com
+alias scratch='export CLAY_ACCESS_KEY=MadeUpAccessKey; node ${HOME}/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
