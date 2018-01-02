@@ -43,6 +43,10 @@
 .bash_sessions/
 .aws/
 .docker/
+.clayconfig
+.rvm
+.vscode
+VirtualBox VMs
 Applications/
 Desktop/
 Documents/
