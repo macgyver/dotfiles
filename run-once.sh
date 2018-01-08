@@ -1,9 +1,9 @@
 # disable two-finger swipe navigation in Chrome http://apple.stackexchange.com/a/80163/62458
-defaults write com.google.Chrome        AppleEnableSwipeNavigateWithScrolls      -bool FALSE
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls      -bool FALSE
-defaults write com.google.Chrome        AppleEnableMouseSwipeNavigateWithScrolls -bool FALSE
-defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool FALSE
-
+defaults write com.google.Chrome	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
+defaults write com.google.Chrome.canary	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
+defaults write com.google.Chrome	AppleEnableMouseSwipeNavigateWithScrolls	-bool FALSE
+defaults write com.google.Chrome.canary	AppleEnableMouseSwipeNavigateWithScrolls	-bool FALSE
+defaults write com.microsoft.VSCode	ApplePressAndHoldEnabled			-bool false
 # add me to wheel and _www for apache
 #sudo dseditgroup -o edit -a jz -t user wheel
 #sudo dseditgroup -o edit -a jz -t user _www
