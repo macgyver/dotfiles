@@ -62,14 +62,12 @@ brokendisk/
 trove/
 .secrets
 .wget-hsts
-# ruby shit
 .gem
 .cache
 .bundler
 .v8flags*
 .psql_history
-
-# legends of learning
-learning-machine/
 .babel.json
 .jspm/
+.mix
+.gnupg
