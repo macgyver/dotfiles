@@ -3,28 +3,10 @@ module.exports = {
 	extends: 'eslint:recommended',
 	parserOptions: {
 		ecmaVersion: 6,
+		impliedStrict: true,
 	},
 	env: {
-		node: true
+		node: true,
+		browser: true,
 	},
-	rules: {
-		'no-undef': 1,
-		'no-console': ['error', { allow: ['warn', 'error'] }],
-		'no-unused-vars': ['error', { args: 'none' }],
-	},
-	overrides: [
-		{
-			files: [
-				'components/**/client.js',
-			],
-			env: {
-				node: false,
-				browser: true,
-				amd: true,
-			},
-			globals: {
-				'DS': false,
-			}
-		}
-	]
 }
