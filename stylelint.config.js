@@ -1,5 +1,5 @@
-{
-    "rules": {
+module.exports = {
+    rules: {
         "color-no-invalid-hex": true,
         "font-family-no-duplicate-names": true,
         "font-family-no-missing-generic-family-keyword": true,
@@ -28,7 +28,6 @@
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "unit-case": "lower",
-        "at-rule-name-case": "lower",
-        "number-leading-zero": "never"
+        "at-rule-name-case": "lower"
     }
 }
