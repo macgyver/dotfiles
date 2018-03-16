@@ -70,4 +70,7 @@ trove/
 .babel.json
 .jspm/
 .mix
+.hex
+.apex
 .gnupg
+slate/
