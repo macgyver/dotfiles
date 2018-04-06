@@ -106,4 +106,5 @@ fi
 export CLAY_ACCESS_KEY=MadeUpAccessKey
 export CLAY_DEFAULT_KEY=local
 export CLAY_DEFAULT_SITE=local-slate
-alias scratch='export CLAY_ACCESS_KEY=MadeUpAccessKey; node ${HOME}/slate/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
+# node ./bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ ../slate-redux/first-run/slate-com
+alias scratch='node ${HOME}/slate/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
