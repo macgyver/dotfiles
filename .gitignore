@@ -30,6 +30,7 @@
 .lesshst
 .php_history
 .pyenv/
+.pylint.d/
 .virtualenvs/
 # something used by powerline, evidently
 .local/
