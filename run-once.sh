@@ -5,11 +5,11 @@ defaults write com.google.Chrome	AppleEnableMouseSwipeNavigateWithScrolls	-bool 
 defaults write com.google.Chrome.canary	AppleEnableMouseSwipeNavigateWithScrolls	-bool FALSE
 defaults write com.microsoft.VSCode	ApplePressAndHoldEnabled			-bool false
 # add me to wheel and _www for apache
-#sudo dseditgroup -o edit -a jz -t user wheel
-#sudo dseditgroup -o edit -a jz -t user _www
+sudo dseditgroup -o edit -a $USER -t user wheel
+#sudo dseditgroup -o edit -a $USER -t user _www
 # add _www to _www - wtf is this not already the case?
 #sudo dseditgroup -o edit -a _www -t user _www
-# todo: make /etc/hosts writable by me
+sudo chmod 664 /etc/hosts
 
 # enable key-repeat for vscode vim extension
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
