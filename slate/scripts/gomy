@@ -1,0 +1,3 @@
+#!/usr/bin/python
+from bash_docker import get_bash_login
+get_bash_login('dockerconfigs_django')

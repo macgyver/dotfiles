@@ -75,3 +75,4 @@ trove/
 .apex
 .gnupg
 slate/
+!slate/scripts
