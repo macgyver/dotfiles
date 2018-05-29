@@ -13,12 +13,12 @@
 .oracle_jre_usage/
 .secrets/
 .mysql_history
+.nvm
 .npm
 .npmrc
+.yarn
 .yarnrc
-.nvm
 .docker/
-.npmrc
 .openvpn-connect.json
 .node-gyp/
 .node_repl_history
@@ -47,6 +47,7 @@
 .clayconfig
 .rvm
 .vscode
+.vscode-insiders
 VirtualBox VMs
 Applications/
 Desktop/
