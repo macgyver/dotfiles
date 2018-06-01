@@ -70,6 +70,7 @@ trove/
 .v8flags*
 .psql_history
 .babel.json
+.quokka
 .jspm/
 .mix
 .hex
