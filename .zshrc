@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
-alias grp="git reset --hard @{u}; git pull"
+alias grp="git fetch; git reset --hard @{u}"
 
 export EDITOR="vim"
 # alt-left/right to move forwards/backwards one word

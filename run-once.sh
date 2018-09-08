@@ -3,6 +3,11 @@ defaults write com.google.Chrome	AppleEnableSwipeNavigateWithScrolls		-bool FALS
 defaults write com.google.Chrome.canary	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
 defaults write com.google.Chrome	AppleEnableMouseSwipeNavigateWithScrolls	-bool FALSE
 defaults write com.google.Chrome.canary	AppleEnableMouseSwipeNavigateWithScrolls	-bool FALSE
+# todo:
+#for x in com.microsoft.VSCode com.github.Atom com.sublimetext.3
+#do
+#	defaults $x ApplePressAndHoldEnabled -bool false
+#done
 defaults write com.microsoft.VSCode	ApplePressAndHoldEnabled			-bool false
 # add me to wheel and _www for apache
 sudo dseditgroup -o edit -a $USER -t user wheel
