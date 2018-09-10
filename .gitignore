@@ -78,3 +78,5 @@ trove/
 .gnupg
 slate/
 !slate/scripts
+.httpie
+.laradock
