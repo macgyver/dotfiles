@@ -1,7 +1,7 @@
 {
   "window.zoomLevel": 0,
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "SFMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
   "editor.formatOnSave": true,
   "html.format.indentHandlebars": true,
   "html.format.wrapAttributes": "auto",
