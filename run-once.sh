@@ -31,4 +31,6 @@ echo "Install SF Mono font system-wide https://medium.com/@deepak.gulati/using-s
 echo "Install SF Mono nerd font for terminal usage https://github.com/artofrawr/powerline-fonts/blob/master/fonts/SFMono/SF%20Mono%20Regular%20Nerd%20Font%20Complete.otf"
 echo "Install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh"
 echo "Fix 1 Password in Chrome Canary: https://support.1password.com/kb/201707/"
-echo "Enable font smoothing if you're not on a high-density display:\ndefaults -currentHost write -globalDomain AppleFontSmoothing -int 3"
+echo "Try to make text look better on a low-density display:"
+echo "defaults -currentHost write -globalDomain AppleFontSmoothing -int 3"
+echo "defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO"

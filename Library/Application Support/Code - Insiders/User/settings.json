@@ -1,9 +1,7 @@
 {
   "window.zoomLevel": 0,
   "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "'SFMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
   "editor.formatOnSave": true,
-  "html.format.indentHandlebars": true,
   "html.format.wrapAttributes": "auto",
   // todo: re-investigate when either of these bugs gets fixed:
   // - https://github.com/beautify-web/js-beautify/issues/1125
@@ -19,5 +17,27 @@
     "javascriptreact",
     "vue"
   ],
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "window.restoreWindows": "all",
+  "editor.insertSpaces": false,
+  "editor.parameterHints.cycle": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.fontFamily": "'SF Mono'",
+  "workbench.fontAliasing": "auto",
+  "terminal.integrated.fontFamily": "'SF Mono'",
+  "terminal.integrated.rendererType": "dom",
+  "githubPullRequests.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ],
+  "breadcrumbs.enabled": true,
+  "workbench.sideBar.location": "left",
+  "html.format.indentHandlebars": true,
+  "[handlebars]": {
+    "editor.formatOnSave": false,
+	}
 }
