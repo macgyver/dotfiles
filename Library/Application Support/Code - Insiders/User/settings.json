@@ -27,13 +27,6 @@
   "workbench.fontAliasing": "auto",
   "terminal.integrated.fontFamily": "'SF Mono'",
   "terminal.integrated.rendererType": "dom",
-  "githubPullRequests.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
   "breadcrumbs.enabled": true,
   "workbench.sideBar.location": "left",
   "html.format.indentHandlebars": true,
