@@ -97,6 +97,8 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
 	bindkey "\e[1;3D" backward-word
 fi
 
+unsetopt share_history
+
 NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
 if [[ -f "$NVM_START_SCRIPT" ]]; then
 	export NVM_DIR="$HOME/.nvm"
