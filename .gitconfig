@@ -17,6 +17,7 @@
 
 [alias]
 	la = "!git config -l | grep alias | cut -c 7-"
+	recent-branches=for-each-ref --sort=-committerdate --count=25 --format='%(refname:short) %(color:cyan)(%(committerdate:relative))%(color:reset)' refs/heads/
 
 # Shortcuts
 	a = add
