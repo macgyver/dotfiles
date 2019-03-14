@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/slate/scripts:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
@@ -106,12 +106,14 @@ if [[ -f "$NVM_START_SCRIPT" ]]; then
 fi
 
 # www.slate.com
+export PATH=$HOME/slate/scripts:$PATH
 nvm use `cat ${HOME}/slate/slate-redux/.nvmrc`
 export CLAY_ACCESS_KEY=MadeUpAccessKey
 export CLAY_DEFAULT_KEY=local
 export CLAY_DEFAULT_SITE=local-slate
 # node ./bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ ../slate-redux/first-run/slate-com
 alias scratch='node ${HOME}/slate/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
+source ~/slate/docker-configs/export-docker-for-mac-ip.sh
 
 # pyenv!
 eval "$(pyenv init -)"
