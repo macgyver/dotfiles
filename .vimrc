@@ -34,17 +34,10 @@ set autoindent smarttab noexpandtab copyindent preserveindent softtabstop=0 shif
 "autocmd BufNewFile,BufRead ~/labs/monetajs/* set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype indent on
-
 if has('autocmd')
 	filetype plugin indent on
 endif
-if has('syntax') && !exists('g:syntax_on')
-	syntax enable
-endif
 
-if has('autocmd')
-	filetype plugin indent on
-endif
 if has('syntax') && !exists('g:syntax_on')
 	syntax enable
 endif
@@ -101,42 +94,22 @@ if &listchars ==# 'eol:$'
 	endif
 endif
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"set nocompatible              " be iMproved, required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-"
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
-"
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+call plug#begin('~/.vim/bundle')
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " for YouCompleteMe. need a newer vim first
 "let g:ycm_path_to_python_interpreter = "/Users/jz/.pyenv/shims/python"
-"Bundle "Valloric/YouCompleteMe"
-Bundle "marijnh/tern_for_vim"
-Plugin 'pangloss/vim-javascript'
+Plug 'Valloric/YouCompleteMe'
+Plug 'marijnh/tern_for_vim'
+"Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
+let g:ale_fixers = ['prettier', 'eslint']
+let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
 
-" " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
