@@ -98,18 +98,18 @@ endif
 
 call plug#begin('~/.vim/bundle')
 Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plug 'vim-airline/vim-airline'
 
-" for YouCompleteMe. need a newer vim first
-"let g:ycm_path_to_python_interpreter = "/Users/jz/.pyenv/shims/python"
-Plug 'Valloric/YouCompleteMe'
-Plug 'marijnh/tern_for_vim'
-"Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
+
 Plug 'w0rp/ale'
 let g:ale_fixers = ['prettier', 'eslint']
-let g:ale_sign_column_always = 1
+"let g:ale_sign_column_always = 1
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
+
+Plug 'marijnh/tern_for_vim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
