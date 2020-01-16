@@ -101,15 +101,15 @@ source $ZSH/oh-my-zsh.sh
 alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
 alias gprune="git branch -r --merged master | grep -v master | grep -v stage | grep -v QA |  sed 's/origin\///' | xargs -n 1  git push --delete origin"
 alias grp="git fetch; git reset --hard @{u}"
-alias vi="vim"
+#alias vi="/usr/local/Cellar/vim/8.1.2050/bin/vim"
 
 export EDITOR="vim"
 # alt-left/right to move forwards/backwards one word
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-	bindkey "\e[1;3C" forward-word
-	bindkey "\e[1;3D" backward-word
+    bindkey "\e[1;3C" forward-word
+    bindkey "\e[1;3D" backward-word
 fi
 
 unsetopt share_history
