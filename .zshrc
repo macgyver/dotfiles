@@ -119,6 +119,8 @@ HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history'
 PROMPT_COMMAND='history -a'
 unsetopt share_history
+# disable auto_cd - mainly because of the confusion between "gulp" the command and "gulp" the directory
+unsetopt AUTO_CD
 
 NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
 if [[ -f "$NVM_START_SCRIPT" ]]; then
