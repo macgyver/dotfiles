@@ -112,6 +112,12 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
     bindkey "\e[1;3D" backward-word
 fi
 
+# history recommendations from https://sanctum.geek.nz/arabesque/better-bash-history/
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+HISTCONTROL=ignoreboth
+HISTIGNORE='ls:bg:fg:history'
+PROMPT_COMMAND='history -a'
 unsetopt share_history
 
 NVM_START_SCRIPT="/usr/local/opt/nvm/nvm.sh"
