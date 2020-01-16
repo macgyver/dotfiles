@@ -97,7 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
+alias gprune="git branch -r --merged master | grep -v master | grep -v stage | grep -v QA |  sed 's/origin\///' | xargs -n 1  git push --delete origin"
 alias grp="git fetch; git reset --hard @{u}"
 alias vi="vim"
 
