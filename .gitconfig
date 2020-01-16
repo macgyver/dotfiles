@@ -18,6 +18,10 @@
 [alias]
 	la = "!git config -l | grep alias | cut -c 7-"
 	recent-branches=for-each-ref --sort=-committerdate --count=25 --format='%(refname:short) %(color:cyan)(%(committerdate:relative))%(color:reset)' refs/heads/
+	prune-origin = !git branch -r --merged master \
+		| sed -E 's/^[[:space:]]*origin\\///' \
+		| grep -v -E '^(master$|develop$|stage$|QA$|release-)' \
+		| xargs -n 1 git push --delete origin
 
 # Shortcuts
 	a = add
