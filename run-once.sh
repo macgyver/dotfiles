@@ -1,3 +1,5 @@
+echo "Install homebrew: https://brew.sh/"
+
 # disable two-finger swipe navigation in Chrome http://apple.stackexchange.com/a/80163/62458
 defaults write com.google.Chrome	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
 defaults write com.google.Chrome.canary	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
@@ -20,6 +22,15 @@ sudo chmod 664 /etc/hosts
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
+brew install ack wget zsh tree git diff-so-fancy watchman pyenv pyenv-virtualenv
+brew cask install phoenix flux qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
+echo "Install driver for xbox 360 controllers https://github.com/360Controller/360Controller/releases"
+echo "Install SF Mono nerd font for terminal usage https://github.com/artofrawr/powerline-fonts/blob/master/fonts/SFMono/SF%20Mono%20Regular%20Nerd%20Font%20Complete.otf"
+echo "Try to make text look better on a low-density display:"
+echo "defaults -currentHost write -globalDomain AppleFontSmoothing -int 3"
+echo "defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO"
+
 # https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -27,14 +38,4 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-brew install zsh git diff-so-fancy watchman
-brew cask install phoenix qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
-echo "Install driver for xbox 360 controllers https://github.com/360Controller/360Controller/releases"
-echo "Install SF Mono font system-wide https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d"
-echo "Install SF Mono nerd font for terminal usage https://github.com/artofrawr/powerline-fonts/blob/master/fonts/SFMono/SF%20Mono%20Regular%20Nerd%20Font%20Complete.otf"
-echo "Install oh-my-zsh https://github.com/robbyrussell/oh-my-zsh"
-echo "Fix 1 Password in Chrome Canary: https://support.1password.com/kb/201707/"
-echo "Try to make text look better on a low-density display:"
-echo "defaults -currentHost write -globalDomain AppleFontSmoothing -int 3"
-echo "defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO"
