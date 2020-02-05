@@ -125,14 +125,11 @@ unsetopt AUTO_CD
 
 # www.slate.com
 export PATH=$HOME/slate/scripts:$PATH
-export CLAY_ACCESS_KEY=MadeUpAccessKey
-export CLAY_DEFAULT_KEY=local
-export CLAY_DEFAULT_SITE=local-slate
-# node ./bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ ../slate-redux/first-run/slate-com
-alias scratch='node ${HOME}/slate/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
-#source ~/slate/docker-configs/export-docker-for-mac-ip.sh
 hash -d redux=~/slate/slate-redux
 hash -d slate=~/slate/slate-web
+hash -d scripts=~/slate/scripts
+export NODE_EXTRA_CA_CERTS=~slate/nginx/configs/ssl/minica.pem
+source ~/slate/docker-configs/export-docker-for-mac-ip.sh
 
 # pyenv!
 eval "$(pyenv init -)"
@@ -141,9 +138,6 @@ eval "$(pyenv virtualenv-init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# start with slate's node by default
-nvm use `cat ${HOME}/slate/slate-redux/.nvmrc`
-
 source <(npx --shell-auto-fallback zsh)
 
 # vscode
