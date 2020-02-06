@@ -30,6 +30,7 @@ echo "Install SF Mono nerd font for terminal usage https://github.com/artofrawr/
 echo "Try to make text look better on a low-density display:"
 echo "defaults -currentHost write -globalDomain AppleFontSmoothing -int 3"
 echo "defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO"
+echo "Install nvm: https://github.com/nvm-sh/nvm#installing-and-updating"
 
 # https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
