@@ -22,7 +22,7 @@ sudo chmod 664 /etc/hosts
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
-brew install ack wget zsh tree git diff-so-fancy watchman pyenv pyenv-virtualenv
+brew install ack wget zsh tree git diff-so-fancy watchman pyenv pyenv-virtualenv jq
 brew cask install phoenix flux qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 echo "Install driver for xbox 360 controllers https://github.com/360Controller/360Controller/releases"
