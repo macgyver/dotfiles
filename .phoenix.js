@@ -1,4 +1,6 @@
 //#!/Users/jz/.nvm/versions/node/v5.1.0/bin/babel
+//
+// todo: store last window size for each frame we nudge and use ctrl-cmd-z to restore it
 var keys = [];
 
 var moveKey = 'ctrl',

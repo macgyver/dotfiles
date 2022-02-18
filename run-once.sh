@@ -1,5 +1,9 @@
 echo "Install homebrew: https://brew.sh/"
 
+# make it possible to quit the finder
+defaults write com.apple.finder QuitMenuItem -bool true
+killall Finder
+
 # disable two-finger swipe navigation in Chrome http://apple.stackexchange.com/a/80163/62458
 defaults write com.google.Chrome	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
 defaults write com.google.Chrome.canary	AppleEnableSwipeNavigateWithScrolls		-bool FALSE
@@ -21,6 +25,11 @@ sudo chmod 664 /etc/hosts
 # enable key-repeat for vscode vim extension
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+
+# stop media keys ⏯  from launching itunes? https://www.howtogeek.com/274345/stop-itunes-from-launching-when-you-press-play-on-your-macs-keyboard/
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+# hmm.. this seems to have broken media keys for spotify too?
+
 
 brew install ack wget zsh tree git diff-so-fancy watchman pyenv pyenv-virtualenv jq
 brew cask install phoenix flux qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

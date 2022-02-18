@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git gitfast gitignore npm gulp python rand-quote)
+plugins=(git gitfast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,8 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gpp="git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
-alias gprune="git branch -r --merged master | grep -v master | grep -v stage | grep -v QA |  sed 's/origin\///' | xargs -n 1  git push --delete origin"
+alias gpp="git pull --prune; git branch --merged main | grep -v main | xargs git branch -d"
+alias gprune="git branch -r --merged main | grep -v release- | grep -v main | grep -v stage | grep -v QA |  sed 's/origin\///' | xargs -n 1  git push --delete origin"
 alias grp="git fetch; git reset --hard @{u}"
 #alias vi="/usr/local/Cellar/vim/8.1.2050/bin/vim"
 
@@ -128,16 +128,18 @@ export PATH=$HOME/slate/scripts:$PATH
 hash -d redux=~/slate/slate-redux
 hash -d slate=~/slate/slate-web
 hash -d scripts=~/slate/scripts
+hash -d myslate=~/slate/my-slate
 export NODE_EXTRA_CA_CERTS=~slate/nginx/configs/ssl/minica.pem
-source ~/slate/docker-configs/export-docker-for-mac-ip.sh
+#source ~/slate/docker-configs/export-docker-for-mac-ip.sh
 
 # pyenv!
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
 source <(npx --shell-auto-fallback zsh)
 
 # vscode

@@ -23,6 +23,7 @@
 		| sed -E 's/^[[:space:]]*origin\\///' \
 		| grep -v -E '^(master$|develop$|stage$|QA$|release-)' \
 		| xargs -n 1 git push --delete origin
+	todev = "!export branch_name=$(git rev-parse --abbrev-ref HEAD) && git co develop && git pull --rebase origin develop && git merge -s recursive -X theirs ${branch_name} && git push && git co -"
 
 # Shortcuts
 	a = add
@@ -126,3 +127,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[pull]
+	ff = only
